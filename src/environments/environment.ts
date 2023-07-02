@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyBQYBd8Yo3E5q54YtdwyDaDG6X4SBk6hAM",
+    authDomain: "pawpatrol-techflix.firebaseapp.com",
+    databaseURL: "https://pawpatrol-techflix-default-rtdb.firebaseio.com/",
+    projectId: "pawpatrol-techflix",
+    storageBucket: "pawpatrol-techflix.appspot.com",
+    messagingSenderId: "147156876875",
+    appId: "1:147156876875:web:367ad3f4974519cf0757ce"
+  },
 };
 
 /*

@@ -1,0 +1,38 @@
+$titlefont: 'Fuzzy Bubbles', cursive;
+
+h2{
+    font-family: $titlefont;
+    margin-top: 20px;
+}
+
+.action-box{
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    box-shadow: 7px 7px #FDF8E1;
+    margin: auto;
+}
+
+mat-form-field{
+    font-family: 'Montserrat', sans-serif;
+    height: 70px;
+}
+
+.longinput{
+    width: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.errorcontainer{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.errormessage {
+    font-size: 12px;
+    color:red;
+    text-align: left;
+
+}

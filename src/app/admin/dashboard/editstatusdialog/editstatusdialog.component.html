@@ -1,0 +1,26 @@
+<h1 matDialogTitle>Change status</h1>
+
+<mat-dialog-content>
+    <br>
+    <select class="form-control" matNativeControl [(ngModel)]="selected">
+        <option>Submitted</option>
+        <option>Invalid Values</option>
+        <option>Cancelled</option>
+        <option>Completed</option>
+    </select>
+
+    <!-- <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <mat-select  [(value)]="selected" name="Status">
+          <mat-option *ngFor="let status of statuses" [value]="status">
+            {{ status }}
+          </mat-option>
+        </mat-select>
+    </mat-form-field> -->
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button matDialogClose>Close</button>
+    <button mat-button (click)="updateStatus()">Update</button>
+    
+</mat-dialog-actions>

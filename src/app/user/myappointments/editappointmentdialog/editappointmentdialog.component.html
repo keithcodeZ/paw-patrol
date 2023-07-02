@@ -1,0 +1,107 @@
+<div class="main">
+    <h2 mat-dialog-title>Edit Appointment</h2>
+
+    <div mat-dialog-content>
+        <!-- SERVICE AVAILED -->
+        <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Service Availed</mat-label>
+            <input matInput type="text" placeholder="Title" [(ngModel)]="data.serviceName" disabled>
+        </mat-form-field>
+        <br>
+
+        <!-- TOTAL -->
+        <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Total</mat-label>
+            <input matInput type="text" placeholder="Total" [(ngModel)]="data.price" disabled>
+        </mat-form-field>
+
+        <!-- STATUS -->
+        <!-- <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Status</mat-label>
+            <select  [(ngModel)]="status" name="Status">
+            <option value="" selected></option>
+              <option *ngFor="let status of statusType" [value]="status">
+                {{ status }}
+              </option>
+            </select>
+          </mat-form-field> -->
+
+        <br>
+
+        <!-- DATE -->
+        <mat-form-field appearance="fill" class="datepadding">
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" class="date" placeholder="01/10/2023"
+            [(ngModel)]="data.date">
+            <mat-datepicker-toggle matIconSuffix [for]="picker" style="width: 5px;"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-hint>MM/DD/YYYY</mat-hint>
+        </mat-form-field>
+
+        <br><br>
+        
+        <!-- time -->
+        <mat-form-field appearance="fill" class="example-full-width">
+            <mat-label>Time</mat-label>
+            <input matTimepicker placeholder="24-hour format"
+            [(ngModel)]="data.time">
+            <mat-icon matSuffix>access_time</mat-icon>
+        </mat-form-field>
+
+        <br>
+
+        <!-- LOCATION -->
+        <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Location</mat-label>
+            <input matInput type="text" placeholder="Location" [(ngModel)]="address">
+        </mat-form-field>
+        <br>
+
+        <!-- PET SPECIE -->
+        <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Specie</mat-label>
+            <input matInput type="text" placeholder="Specie" [(ngModel)]="petSpecies">
+        </mat-form-field>
+        <br>
+
+        <!-- BREED -->
+        <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Breed</mat-label>
+            <input matInput type="text" placeholder="Breed" [(ngModel)]="petBreed">
+        </mat-form-field>
+        <br>
+
+        <!-- AGE -->
+        <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Age</mat-label>
+            <input matInput type="text" placeholder="Age" [(ngModel)]="petAge">
+        </mat-form-field>
+        <br>
+
+        <!-- GENDER -->
+        <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Gender</mat-label>
+            <input matInput type="text" placeholder="Gender" [(ngModel)]="petGender">
+        </mat-form-field>
+        <br>
+
+        <!-- WEIGHT -->
+        <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Weight</mat-label>
+            <input matInput type="text" placeholder="Weight" [(ngModel)]="petWeight">
+        </mat-form-field>
+        <br>
+
+    </div>
+
+    <div mat-dialog-actions align="end">
+        <button class="btn btn-light" matDialogClose>Close</button>
+        <button
+          mat-button
+          mat-dialog-close
+          (click)="updateAppointment()"
+        >
+          Update
+        </button>
+    </div>
+</div>

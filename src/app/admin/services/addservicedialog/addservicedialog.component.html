@@ -1,0 +1,53 @@
+<div class="main">
+<h2 mat-dialog-title>Add a service</h2>
+
+<div mat-dialog-content>
+    <form #addServiceForm="ngForm" [formGroup]="addForm">
+
+        <!-- TITLE -->
+        <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title" type="text" placeholder="Title" />
+        </mat-form-field>
+        <br>
+
+        <!-- DESCRIPTION -->
+        <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Description</mat-label>
+            <input
+              matInput
+              formControlName="description"
+              type="text"
+              placeholder="description"
+            />
+        </mat-form-field>
+
+        <!-- PRICE -->
+        <mat-form-field style="width: 100%" appearance="fill">
+            <mat-label>Price</mat-label>
+            <input
+              matInput
+              formControlName="price"
+              type="text"
+              placeholder="price"
+            />
+        </mat-form-field>
+
+
+    </form>
+
+</div>
+
+<div mat-dialog-actions align="end">
+    <button class="btn btn-light" matDialogClose>Close</button>
+    <button
+      mat-button
+      mat-dialog-close
+      (click)="createService(addServiceForm.value)"
+      [disabled]="!addForm.valid"
+    >
+      Add
+    </button>
+</div>
+
+</div>

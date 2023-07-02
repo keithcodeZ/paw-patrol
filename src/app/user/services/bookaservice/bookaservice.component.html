@@ -1,0 +1,92 @@
+<div class="main">
+    <h2 mat-dialog-title>
+        {{ data.title }} Service
+    </h2>
+    <div mat-dialog-content>
+        
+        <form #bookServiceForm="ngForm" [formGroup]="bookingForm">
+
+            <mat-form-field style="width: 100%" appearance="outline">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="address" type="text" placeholder="Address"
+                [(ngModel)]="data.address">
+            </mat-form-field>
+
+            <br>
+
+          
+            <mat-form-field appearance="outline" class="datepadding">
+                <mat-label>Date</mat-label>
+                <input matInput [matDatepicker]="picker" class="date" formControlName="date" placeholder="01/10/2023">
+                <mat-datepicker-toggle matIconSuffix [for]="picker" style="width: 5px;"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-hint>MM/DD/YYYY</mat-hint>
+            </mat-form-field>
+
+            <br><br>
+
+          
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Time</mat-label>
+                <input matTimepicker formControlName="time" placeholder="24-hour format">
+                <mat-icon matSuffix>access_time</mat-icon>
+            </mat-form-field>
+  
+            <br>
+
+            <mat-form-field style="width: 100%" appearance="outline">
+                <mat-label>Species</mat-label>
+                <input matInput formControlName="petSpecies" type="text" placeholder="Species">
+            </mat-form-field>
+            <!-- <mat-form-field appearance="outline" style="width: 100%">
+                <mat-label>Species</mat-label>
+                <mat-select formControlName="petSpecies" placeholder="Species">
+                    <mat-option value="Dog">Dog</mat-option>
+                    <mat-option value="Cat">Cat</mat-option>
+                </mat-select>
+            </mat-form-field> -->
+
+            <br>
+
+            <mat-form-field style="width: 100%" appearance="outline">
+                <mat-label>Breed</mat-label>
+                <input matInput formControlName="petBreed" type="text" placeholder="Breed">
+            </mat-form-field>
+
+            <br>
+
+            <mat-form-field style="width: 100%" appearance="outline">
+                <mat-label>Age</mat-label>
+                <input matInput formControlName="petAge" type="text" placeholder="Age">
+            </mat-form-field>
+
+            <br>
+
+            <mat-form-field style="width: 100%" appearance="outline">
+                <mat-label>Gender</mat-label>
+                <input matInput formControlName="petGender" type="text" placeholder="Gender">
+            </mat-form-field>
+
+            <br>
+
+            <mat-form-field style="width: 100%" appearance="outline">
+                <mat-label>Weight</mat-label>
+                <input matInput formControlName="petWeight" type="text" placeholder="Weight">
+            </mat-form-field>
+            
+
+        </form>
+    </div>
+
+    <div mat-dialog-actions align="end">
+        <button class="btn btn-light" matDialogClose>Close</button>
+        <button
+          mat-button
+          mat-dialog-close
+          (click)="bookAService(bookServiceForm.value)"
+          [disabled]="!bookingForm.valid"
+        >
+          Book
+        </button>
+    </div>
+</div>

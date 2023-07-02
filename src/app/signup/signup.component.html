@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img width="95%" src="../../assets/14.png" alt="">
+        </div>
+        <div class="col">
+            <div class="action-box text-center">
+                <h2>Sign Up</h2>
+
+                <form #register="ngForm" [formGroup]="userForm">
+                    <mat-form-field class="shortinput" appearance="outline">
+                        <input matInput placeholder="First Name" formControlName="fname">
+                    </mat-form-field>
+                    &nbsp;
+                    <mat-form-field class="shortinput" appearance="outline">
+                        <input matInput placeholder="Last Name" formControlName="lname">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="longinput" appearance="outline">
+                        <input matInput placeholder="Phone Number" formControlName="phonenumber">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="longinput" appearance="outline">
+                        <input matInput placeholder="Home Address" formControlName="address">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="longinput" appearance="outline">
+                        <input  matInput placeholder="Email" formControlName="email">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="longinput" appearance="outline">
+                        <input matInput [type]="hide ? 'password' : 'text' " formControlName="password" placeholder="Password">
+                        <button class="a" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+
+                    <div class="errorcontainer">
+                        <span class="errormessage" *ngIf="error">
+                            {{ getErrorMessage() }}
+                        </span>
+                    </div>
+
+                    <button type="button" class="btn btn-warning" (click)="signup(register.value)">Create an account</button>
+                    <br>
+
+                    <br>
+
+                    <p class="regprompt">Already have an account? <a routerLink="/signin"> Log in here</a> </p>
+
+                    <br>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<br> <br>
+
+
+<br>
+
+<app-footer></app-footer>

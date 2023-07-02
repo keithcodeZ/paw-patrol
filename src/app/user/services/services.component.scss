@@ -1,0 +1,28 @@
+$titlefont: 'Fuzzy Bubbles', cursive;
+
+h1{
+    font-family: $titlefont;
+    // margin-top: 20px;
+}
+
+p{
+    text-align: center;
+}
+
+#reminders{
+    // background-color: #FCEFB4;
+    border: 1px solid rgb(245, 234, 198);
+    border-radius: 12px;
+    padding: 20px 20px 15px 20px;
+    box-shadow: 10px 10px #FDF8E1;
+}
+
+#card-service{
+    font-size: 12px;
+}
+
+.card{
+    border: 1px solid rgb(245, 234, 198);
+    box-shadow: 10px 10px #FDF8E1;
+    margin: 20px 0px;
+}

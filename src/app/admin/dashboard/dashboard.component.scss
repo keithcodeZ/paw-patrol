@@ -1,0 +1,32 @@
+$titlefont: 'Fuzzy Bubbles', cursive;
+
+h2{
+    font-family: $titlefont;
+}
+
+.main{
+    margin: 0px 50px;
+    font-family: 'Montserrat', sans-serif;
+    
+
+}
+
+table{
+    font-family: 'Montserrat', sans-serif;
+}
+
+// .icon-display {
+//     transform: scale(.6);
+//  }
+
+.action-button{
+    transform: scale(1);
+    // background: none;
+    // border: none;
+    // margin: 10px 10px;
+}
+
+// .action-button:hover{
+//     border: 1px rgb(211, 211, 211) solid;
+//     border-radius: 10px;
+// }

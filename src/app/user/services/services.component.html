@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row text-center">
+        <h1>Our Services</h1>
+    </div>
+    <div class="row" id="reminders">
+        <p>
+            Reminders before booking:
+            <br><br>
+            1. We cover selected areas in <b> Metro Manila (Sampaloc, Recto, Tondo, Espana)</b> with a <b>delivery and transport fee of 60 PHP </b> that will be added to your total. If put a location outside our covered areas, your appointment will be automatically be invalid, hence voided.
+            <br><br>
+            2. Before requesting an appointment, please ensure that your pet is at least 16 weeks old and has complete shots from the vet (5-in-1 and rabies vaccine). 
+            <br><br>
+            3. It is highly recommended to book with us at least one (1) week ahead of your preferred schedule. We can also make special arrangements for regularly scheduled grooming appointments (e.g. weekly, biweekly, monthly, etc.). Just let us know in advance so that we can provide you with the best possible schedule.
+        </p>
+    </div>
+</div>
+
+<br><br>
+
+<div class="container" id="card-service">
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let service of services">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{ service.title }}
+                    </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        {{ service.price }} PHP
+                    </h6>
+                    <p class="card-text text-left">
+                        {{ service.description }}
+                    </p>
+                    <a  class="btn btn-outline-warning" (click)="bookAService(service)">Book now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<br><br>
+
+</div>
+
+<br><br>
+
+<!-- <app-footer></app-footer> -->

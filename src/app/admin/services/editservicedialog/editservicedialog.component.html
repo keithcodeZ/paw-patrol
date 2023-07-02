@@ -1,0 +1,50 @@
+<div class="main">
+    <h2 mat-dialog-title>Edit service</h2>
+    
+    <div mat-dialog-content>
+        <!-- <form #addServiceForm="ngForm" [formGroup]="addForm"> -->
+    
+            <!-- TITLE -->
+            <mat-form-field style="width: 100%" appearance="fill">
+                <mat-label>Title</mat-label>
+                <input matInput type="text" placeholder="Title" [(ngModel)]="title">
+            </mat-form-field>
+            <br>
+    
+            <!-- DESCRIPTION -->
+            <mat-form-field style="width: 100%" appearance="fill">
+                <mat-label>Description</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  placeholder="description"
+                  [(ngModel)]="description">
+            </mat-form-field>
+    
+            <!-- PRICE -->
+            <mat-form-field style="width: 100%" appearance="fill">
+                <mat-label>Price</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  placeholder="price"
+                  [(ngModel)]="price">
+            </mat-form-field>
+    
+    
+        <!-- </form> -->
+    
+    </div>
+    
+    <div mat-dialog-actions align="end">
+        <button class="btn btn-light" matDialogClose>Close</button>
+        <button
+          mat-button
+          mat-dialog-close
+          (click)="updateService()"
+        >
+          Update
+        </button>
+    </div>
+    
+    </div>

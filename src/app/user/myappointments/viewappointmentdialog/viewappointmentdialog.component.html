@@ -1,0 +1,31 @@
+<div class="main">
+    <h4 mat-dialog-title>{{ data.serviceName }} Appointment</h4>
+    <p>
+        <b>Service Availed:</b> {{ data.serviceName }} <br>
+
+        <b>Date Created:</b> {{ data.dateCreated }} <br>
+
+        <b>Date of Booking:</b> {{ data.date }} | {{ data.time }} <br>
+
+        <b>Location:</b> {{ data.address }} <br>
+
+        <b>Total:</b> {{ data.price }} PHP <br>
+    </p>
+
+    <h5>Pet Information</h5>
+    <p>
+        <b>Specie:</b> {{ data.petSpecies }} <br>
+        <b>Breed:</b> {{ data.petBreed }} <br>
+        <b>Age:</b> {{ data.petAge }} <br>
+        <b>Gender:</b> {{ data.petGender }} <br>
+        <b>Weight (kg): </b>{{ data.petWeight }} <br>
+    </p>
+
+    <div mat-dialog-actions align="end">
+        <button class="btn btn-light" matDialogClose>Close</button>
+    </div>
+
+
+
+</div>
+

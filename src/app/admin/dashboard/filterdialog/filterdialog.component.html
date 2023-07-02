@@ -1,0 +1,44 @@
+<div class="main">
+<mat-form-field appearance="fill">
+    <mat-label>Enter first date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="data.filterDate1" />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br />
+  <br />
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Enter last date</mat-label>
+    <input matInput [matDatepicker]="picker2" [(ngModel)]="data.filterDate2" />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+  </mat-form-field>
+  <br />
+  <br />
+
+  <select class="form-control" [(ngModel)]="data.filterType">
+    <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+  </select>
+
+  <!-- <p *ngFor="let type of types">{{ type }}</p> -->
+  
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Type</mat-label>
+    <mat-select [(ngModel)]="data.filterType">
+      <mat-option *ngFor="let type of types" [value]="type">
+        {{ type }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> -->
+  <br />
+  <br />
+
+  <div mat-dialog-actions align="end">
+    <button mat-raised-button style="margin: 2px" color="primary" [matDialogClose]="data" >OK</button>
+    <button mat-raised-button style="margin: 2px" color="primary" matDialogClose="clear">Clear</button>
+    </div>
+  
+</div>
